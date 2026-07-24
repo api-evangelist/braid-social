@@ -1,22 +1,73 @@
 aid: braid-social
+accessModel:
+  pricing: unknown
+  onboarding: unknown
+  trial: false
+  try_now: false
+  public: false
+  label: Unknown
+  confidence: low
+  source: []
+  generated: '2026-07-22'
+  method: derived
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/braid-social.png
 name: Braid Social
-description: Braid Social is a company surfaced as a portfolio company of a16z and added to the API Evangelist
-  network as a stub for enrichment. This profile is a lead awaiting the enrichment pipeline.
+description: >-
+  Braid (Braid Social) was a creator-economy startup building a direct-to-fan
+  engagement platform for the creator economy. Founded by former Facebook
+  product designer Matthew Cahill and software engineer Chris Piro, Braid let
+  creators build customizable landing pages that consolidated their work across
+  the web (blog posts, videos, podcasts, and commerce links), collect fan phone
+  numbers, and reach followers directly through SMS text messages, push
+  notifications, and mailing lists, with link tracking and cross-platform
+  analytics. Positioned as a creator-friendly, direct-to-audience alternative to
+  algorithm-driven social platforms, Braid raised a $6.8M seed round in August
+  2023 led by Andreessen Horowitz (a16z) with Initialized Capital. The company
+  appears to be defunct as of this profile — its primary domain (braid.ai) now
+  redirects to a domain-for-sale listing and no developer, documentation, or API
+  surface could be found. Added to the API Evangelist network as an a16z
+  portfolio lead; no public API artifacts exist to enrich.
 url: https://raw.githubusercontent.com/api-evangelist/braid-social/refs/heads/main/apis.yml
 x-type: company
 x-source: vc-portfolio
 x-backed-by:
 - a16z
+- Initialized Capital
 x-tier: stub
 x-tier-reason: portfolio-lead
+x-status: defunct
+x-status-note: >-
+  Primary domain braid.ai redirects to a domain-for-sale page; braid.social does
+  not resolve; docs/app/api/developer subdomains all fail to connect. No live
+  developer surface found (probed 2026-07-18).
+x-founders:
+- Matthew Cahill
+- Chris Piro
+x-funding: Seed $6.8M (2023-08) led by Andreessen Horowitz with Initialized Capital
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-18'
 tags:
 - Company
+- Creator Economy
+- Social
+- Messaging
+- SMS
+- Landing Pages
+- Analytics
+- Consumer
+- Direct-to-Fan
 apis: []
+common:
+- type: LinkedIn
+  url: https://www.linkedin.com/company/braidsocial
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+x-enrichment:
+  date: '2026-07-19'
+  status: backfilled
+  pass: local-v1
+  note: backfilled from .gitignore signal + verified work evidence
