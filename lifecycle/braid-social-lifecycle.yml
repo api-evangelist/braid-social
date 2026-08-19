@@ -1,0 +1,72 @@
+generated: '2026-08-13'
+method: probed
+source: live probes of braid.ai, braid.social, trybraid.io, braidsocial.com and core.trybraid.io, 2026-08-13
+note: >-
+  This artifact records the lifecycle of the COMPANY'S PRODUCTS, not of an API —
+  Braid Social has never published a public API, so there is no versioning
+  policy, deprecation policy, Sunset/Deprecation header practice, SLA or status
+  page to capture. What the probes did establish is a product-level correction
+  to the previous profile: Braid Social, Inc. is not defunct, it pivoted, and
+  the pivot product is itself paused.
+api_lifecycle:
+  versioning_scheme: null
+  versioning_policy_url: null
+  deprecation_policy_url: null
+  sunset_header_practice: null
+  sla_url: null
+  status_page_url: null
+  deprecated_operations: []
+  note: >-
+    No public API exists on any Braid host, so none of the above is published.
+    No StatusPage or Deprecation pointer is wired into apis.yml, because the
+    provider publishes neither.
+product_lifecycle:
+- product: Braid (creator direct-to-fan platform)
+  status: discontinued
+  domains:
+  - braid.ai
+  - braid.social
+  evidence: >-
+    braid.ai now serves a Cloudflare interstitial and resolves through to
+    https://www.atom.com/name/Braid.ai, a domain-for-sale listing. braid.social
+    has no DNS A record at all. No api./docs./app./developer. subdomain resolves
+    on either domain.
+- product: Braid Teams (AI employee-engagement app for Slack)
+  status: paused
+  domains:
+  - trybraid.io
+  - braidsocial.com
+  app_host: app.trybraid.io
+  api_host: core.trybraid.io
+  evidence: >-
+    The marketing site is live and current (Framer build published 2026-02-12)
+    and states on the homepage, directly under the hero, "Currently not
+    accepting new users". The Slack install entry point the "Add to Slack"
+    button targets, https://core.trybraid.io/slack/install, returns HTTP 500.
+    The application backend root https://core.trybraid.io/ still answers
+    {"status": "ok"}, so infrastructure is running while onboarding is closed.
+x-evidence:
+- url: https://braid.ai/
+  http_status: 403
+  fetched: '2026-08-13'
+  observed: Cloudflare challenge; final effective URL https://www.atom.com/name/Braid.ai
+- url: https://braid.social/
+  http_status: 0
+  fetched: '2026-08-13'
+  observed: no DNS A record; connection could not be established
+- url: https://www.trybraid.io/
+  http_status: 200
+  fetched: '2026-08-13'
+  observed: '"Currently not accepting new users"; footer reads "Braid Social, Inc."'
+- url: https://braidsocial.com/
+  http_status: 200
+  fetched: '2026-08-13'
+  observed: same Framer site; og:url is https://www.trybraid.io/
+- url: https://core.trybraid.io/
+  http_status: 200
+  fetched: '2026-08-13'
+  observed: '{"status": "ok"}'
+- url: https://core.trybraid.io/slack/install
+  http_status: 500
+  fetched: '2026-08-13'
+  observed: install flow errors; this is the target of the site "Add to Slack" button

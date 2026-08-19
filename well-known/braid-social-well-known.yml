@@ -1,0 +1,168 @@
+generated: '2026-08-13'
+method: probed
+source: live HTTP probes of every Braid host, 2026-08-13
+note: >-
+  RECORDED ABSENCE. Every /.well-known/ path was probed on all three live Braid
+  hosts and none served a document, so NO WellKnown / SecurityTxt / APICatalog
+  pointer is wired into apis.yml. Two of the hosts must be read carefully:
+  www.trybraid.io and braidsocial.com are a Framer-hosted marketing site that
+  returns a real HTTP 404 for these paths, while app.trybraid.io is a
+  single-page app whose catch-all returns HTTP 200 with the SAME HTML shell
+  ("<!doctype html>... Braid Teams") for EVERY path including
+  /.well-known/agent-card.json, /openapi.json and /llms.txt. Those 200s are the
+  SPA catch-all false positive, not documents, and are recorded as misses. The
+  private application backend core.trybraid.io returns a genuine HTTP 404 for
+  all of them.
+hosts:
+- host: www.trybraid.io
+  catch_all: false
+- host: braidsocial.com
+  catch_all: false
+- host: app.trybraid.io
+  catch_all: true
+  catch_all_note: >-
+    SPA catch-all: every path returns HTTP 200 with the app HTML shell. All
+    200s below are HTML, not documents, and are treated as misses.
+- host: core.trybraid.io
+  catch_all: false
+hits: 0
+probes:
+- host: www.trybraid.io
+  path: /.well-known/security.txt
+  status: 404
+  document: false
+  file: null
+- host: www.trybraid.io
+  path: /.well-known/openid-configuration
+  status: 404
+  document: false
+  file: null
+- host: www.trybraid.io
+  path: /.well-known/oauth-authorization-server
+  status: 404
+  document: false
+  file: null
+- host: www.trybraid.io
+  path: /.well-known/oauth-protected-resource
+  status: 404
+  document: false
+  file: null
+- host: www.trybraid.io
+  path: /.well-known/api-catalog
+  status: 404
+  document: false
+  file: null
+- host: www.trybraid.io
+  path: /.well-known/ai-plugin.json
+  status: 404
+  document: false
+  file: null
+- host: www.trybraid.io
+  path: /.well-known/agent-card.json
+  status: 404
+  document: false
+  file: null
+- host: www.trybraid.io
+  path: /.well-known/agent.json
+  status: 404
+  document: false
+  file: null
+- host: braidsocial.com
+  path: /.well-known/security.txt
+  status: 404
+  document: false
+  file: null
+- host: braidsocial.com
+  path: /.well-known/openid-configuration
+  status: 404
+  document: false
+  file: null
+- host: braidsocial.com
+  path: /.well-known/oauth-authorization-server
+  status: 404
+  document: false
+  file: null
+- host: braidsocial.com
+  path: /.well-known/oauth-protected-resource
+  status: 404
+  document: false
+  file: null
+- host: braidsocial.com
+  path: /.well-known/api-catalog
+  status: 404
+  document: false
+  file: null
+- host: braidsocial.com
+  path: /.well-known/ai-plugin.json
+  status: 404
+  document: false
+  file: null
+- host: braidsocial.com
+  path: /.well-known/agent-card.json
+  status: 404
+  document: false
+  file: null
+- host: braidsocial.com
+  path: /.well-known/agent.json
+  status: 404
+  document: false
+  file: null
+- host: core.trybraid.io
+  path: /.well-known/security.txt
+  status: 404
+  document: false
+  file: null
+- host: core.trybraid.io
+  path: /.well-known/openid-configuration
+  status: 404
+  document: false
+  file: null
+- host: core.trybraid.io
+  path: /.well-known/oauth-authorization-server
+  status: 404
+  document: false
+  file: null
+- host: core.trybraid.io
+  path: /.well-known/oauth-protected-resource
+  status: 404
+  document: false
+  file: null
+- host: core.trybraid.io
+  path: /.well-known/api-catalog
+  status: 404
+  document: false
+  file: null
+- host: core.trybraid.io
+  path: /.well-known/agent-card.json
+  status: 404
+  document: false
+  file: null
+- host: core.trybraid.io
+  path: /.well-known/agent.json
+  status: 404
+  document: false
+  file: null
+- host: app.trybraid.io
+  path: /.well-known/security.txt
+  status: 200
+  document: false
+  file: null
+  note: SPA catch-all returned the app HTML shell, not a security.txt
+- host: app.trybraid.io
+  path: /.well-known/oauth-authorization-server
+  status: 200
+  document: false
+  file: null
+  note: SPA catch-all returned the app HTML shell, not JSON
+- host: app.trybraid.io
+  path: /.well-known/agent-card.json
+  status: 200
+  document: false
+  file: null
+  note: SPA catch-all returned the app HTML shell, not an AgentCard
+- host: app.trybraid.io
+  path: /.well-known/agent.json
+  status: 200
+  document: false
+  file: null
+  note: SPA catch-all returned the app HTML shell, not an AgentCard

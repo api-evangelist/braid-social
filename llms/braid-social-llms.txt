@@ -1,0 +1,63 @@
+# Braid Social
+
+<!--
+generated: 2026-08-13
+method: generated
+source: apis.yml + repo artifacts; /llms.txt returned HTTP 404 on www.trybraid.io, braidsocial.com and core.trybraid.io
+-->
+
+> Braid Social, Inc. is a venture-backed startup (seed $6.8M, August 2023, led by
+> Andreessen Horowitz with Initialized Capital, founded by Matthew Cahill and Chris
+> Piro). It launched as a creator-economy direct-to-fan platform on braid.ai and
+> braid.social, and now ships "Braid Teams" at trybraid.io — an AI-powered employee
+> engagement copilot that runs inside Slack, automating icebreakers, games, polls,
+> events, reminders, leaderboards and engagement reporting for distributed teams.
+
+## Agent-relevant summary
+
+- **There is no public Braid API.** No developer portal, no API reference, no OpenAPI,
+  AsyncAPI or GraphQL schema, no SDK on npm/PyPI/RubyGems/crates.io, no CLI, no MCP
+  server, no A2A agent card, and no GitHub organization (`braidsocial`, `trybraid` and
+  `braid-social` all 404 on the GitHub API).
+- **Do not treat `core.trybraid.io` as an API.** It is the private application backend
+  for the Slack app. Its root answers `{"status": "ok"}`; every documentation, spec and
+  `/.well-known/` path on it returns HTTP 404. Nothing about it is published or supported
+  for third-party use.
+- **Do not treat `app.trybraid.io` 200s as discoveries.** That host is a single-page app
+  whose catch-all returns HTTP 200 with the same HTML shell for every path, including
+  `/openapi.json`, `/llms.txt` and `/.well-known/agent-card.json`.
+- **The product is paused.** The homepage states "Currently not accepting new users" and
+  the Slack install endpoint `https://core.trybraid.io/slack/install` returns HTTP 500.
+- **The original domains are gone.** `braid.ai` redirects to an atom.com domain-for-sale
+  listing; `braid.social` has no DNS.
+
+## Live pages
+
+- [Braid Teams home](https://www.trybraid.io/): product overview and published pricing.
+- [Support](https://www.trybraid.io/support): contact form and FAQ; support@trybraid.io.
+- [Blog](https://www.trybraid.io/blog): employee-engagement and team-building articles.
+- [Schedule a demo](https://www.trybraid.io/schedule-a-demo): Enterprise contact path.
+- [braidsocial.com](https://braidsocial.com/): identical mirror of the trybraid.io site.
+
+## Pricing (seat-based SaaS, not API plans)
+
+- **Free** — $0/month. Library of 3 games, standard insights, basic leaderboards.
+- **Premium** — $5/user/month billed annually ($7 billed monthly). New games monthly,
+  advanced game customization, deeper insights, slash commands, recurring games and
+  reminders, monthly engagement reports, priority support.
+- **Enterprise** — contact us, positioned for 1,000+ users. 1:1 onboarding, custom game
+  development, admin dashboards, custom roles and permissions, dedicated support channel.
+
+## Integration surface
+
+The only way to use Braid Teams is to install the Slack app into a Slack workspace and
+drive it from Slack (slash commands, in-channel activities). There is no programmatic
+entry point for an agent, and no credential a third party can obtain.
+
+## Artifacts in this profile
+
+- `plans/braid-social-plans-pricing.yml` — the three published tiers.
+- `rate-limits/braid-social-rate-limits.yml` — recorded absence, `limit_count: 0`.
+- `lifecycle/braid-social-lifecycle.yml` — product lifecycle and wind-down evidence.
+- `well-known/braid-social-well-known.yml` — every `/.well-known/` probe and its status.
+- `security/braid-social-domain-security.yml` — TLS/HSTS/DNSSEC/CAA/SPF/DMARC probe.

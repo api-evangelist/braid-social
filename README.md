@@ -42,6 +42,10 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-Braid Social is a company surfaced as a portfolio company of a16z and added to the API Evangelist network as a stub for enrichment. This profile is a lead awaiting the enrichment pipeline.
+Braid Social, Inc. is an a16z / Initialized Capital portfolio company (seed $6.8M, August 2023) founded by Matthew Cahill and Chris Piro. It launched as a creator-economy direct-to-fan platform on `braid.ai` / `braid.social`, and now ships **Braid Teams** at [trybraid.io](https://www.trybraid.io/) (mirrored at braidsocial.com) — an AI-powered employee-engagement copilot that runs inside Slack: icebreakers, games, polls, events, reminders, leaderboards and engagement reporting.
 
-Backed by: a16z
+**There is no public Braid API.** No developer portal, API reference, OpenAPI/AsyncAPI/GraphQL spec, SDK, CLI, MCP server, agent card or GitHub organization was found on any Braid host (probed 2026-08-13). The only machine surface is the private application backend at `core.trybraid.io`, which answers `{"status": "ok"}` at its root and returns HTTP 404 for every spec, docs and `/.well-known/` path. `app.trybraid.io` is a single-page app whose catch-all returns HTTP 200 with the same HTML shell for every path — those 200s are not documents.
+
+The original domains are gone: `braid.ai` redirects to an atom.com domain-for-sale listing and `braid.social` has no DNS. Braid Teams itself is paused — the homepage reads "Currently not accepting new users" and the Slack install endpoint returns HTTP 500. See `lifecycle/braid-social-lifecycle.yml` for the full evidence table.
+
+Backed by: a16z, Initialized Capital

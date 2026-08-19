@@ -1,0 +1,73 @@
+generated: '2026-08-13'
+method: searched
+source: https://www.trybraid.io/
+note: >-
+  Read verbatim from the pricing section of the Braid Teams homepage
+  (https://www.trybraid.io/, HTTP 200; mirrored identically at
+  https://braidsocial.com/, HTTP 200). There is no standalone /pricing page —
+  https://www.trybraid.io/pricing returns HTTP 404 — and no machine-readable
+  pricing/catalog endpoint was found. These are SEAT-BASED SaaS plans for a
+  Slack application; they are NOT API plans. Braid Social publishes no public
+  API, so no plan here carries an API quota, call allowance, or overage rate.
+  The homepage also states the product is "Currently not accepting new users",
+  so these published prices may not be purchasable.
+product: Braid Teams (Slack employee-engagement app)
+currency: USD
+billing_model: per-seat subscription
+plan_count: 3
+plans:
+- name: Free
+  price: 0
+  currency: USD
+  period: month
+  unit: workspace
+  included:
+  - Library of 3 games
+  - Standard insights
+  - Basic leaderboards
+  api_quota: null
+  overage: null
+- name: Premium
+  price: 5
+  currency: USD
+  period: month
+  unit: user
+  billing_note: >-
+    $5/month per user billed annually; $7/month per user billed monthly.
+  price_monthly: 7
+  included:
+  - New games every month
+  - Advanced game customization
+  - Deeper personal & team insights
+  - Slash commands
+  - Recurring games & reminders
+  - Monthly engagement reports
+  - Priority support response
+  api_quota: null
+  overage: null
+- name: Enterprise
+  price: null
+  currency: USD
+  period: null
+  unit: user
+  billing_note: 'Contact us. Positioned for 1,000+ users.'
+  included:
+  - 1:1 onboarding support
+  - Custom game development
+  - Comprehensive admin dashboards
+  - Customizable roles & permissions
+  - Dedicated support channel
+  - Priority feature requests
+  api_quota: null
+  overage: null
+  contact: https://www.trybraid.io/schedule-a-demo
+x-evidence:
+- url: https://www.trybraid.io/
+  http_status: 200
+  fetched: '2026-08-13'
+- url: https://www.trybraid.io/pricing
+  http_status: 404
+  fetched: '2026-08-13'
+- url: https://braidsocial.com/
+  http_status: 200
+  fetched: '2026-08-13'

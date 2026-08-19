@@ -1,0 +1,28 @@
+generated: '2026-08-13'
+method: searched
+source: https://www.trybraid.io/
+note: >-
+  No rate limits are published, because Braid Social publishes no public API.
+  The full public surface was walked from the sitemap
+  (https://www.trybraid.io/sitemap.xml, HTTP 200) — it lists exactly three
+  non-blog pages: /, /support and /blog. There is no developer portal, no API
+  reference and no docs host, so there is no page on which a limit could be
+  documented. The private application backend at https://core.trybraid.io
+  answers {"status":"ok"} at its root but returns no RateLimit-*,
+  X-RateLimit-* or Retry-After headers on an anonymous request, and 404s every
+  spec and documentation path probed.
+limit_count: 0
+limits: []
+headers: []
+status_on_exhaustion: null
+x-evidence:
+- url: https://www.trybraid.io/sitemap.xml
+  http_status: 200
+  fetched: '2026-08-13'
+- url: https://core.trybraid.io/
+  http_status: 200
+  fetched: '2026-08-13'
+  observed: 'body {"status": "ok"}; no rate-limit response headers'
+- url: https://www.trybraid.io/docs
+  http_status: 404
+  fetched: '2026-08-13'
