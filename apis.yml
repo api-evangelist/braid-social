@@ -47,6 +47,8 @@ description: >-
   /.well-known/ path. The homepage states the product is "Currently not
   accepting new users" and the Slack install endpoint returns HTTP 500.
 url: https://raw.githubusercontent.com/api-evangelist/braid-social/refs/heads/main/apis.yml
+x-api-posture: no-product-api
+x-api-posture-basis: observed
 x-type: company
 x-source: vc-portfolio
 x-backed-by:
