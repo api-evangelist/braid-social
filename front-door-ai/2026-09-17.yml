@@ -1,0 +1,25 @@
+# Front Door AI Index — braid-social — 2026-09-17
+# AI vocabulary counted on the provider's root page. Generated; do not edit.
+# `score` is null unless ownership is `own` — see front_door_ai.py.
+front_door_ai:
+  slug: braid-social
+  lexicon_version: '1.0'
+  probed_at: '2026-09-17'
+  host: www.trybraid.io
+  final_host: www.trybraid.io
+  ownership: own
+  owner: braid-social
+  shares_host_with: null
+  inherited_from: null
+  verdict: scored
+  score: 15
+  host_score: 15
+  density: 27.08
+  words: 554
+  tiers:
+    agentic: 0
+    core: 15
+    model: 0
+  ambiguous: 0
+  top_terms:
+    AI: 15
