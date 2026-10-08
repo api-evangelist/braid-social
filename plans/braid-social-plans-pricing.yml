@@ -71,3 +71,36 @@ x-evidence:
 - url: https://braidsocial.com/
   http_status: 200
   fetched: '2026-08-13'
+x-canonical:
+  generated: '2026-10-08'
+  vocabulary: all/0-working/economics/plans-canonical.yml
+  models:
+  - metered
+  - seat
+  units:
+  - object
+  - seat
+  plans:
+  - name: Free
+    access: other
+    model: metered
+    model_how: derived
+    units:
+    - object
+    periods:
+    - month
+  - name: Premium
+    access: other
+    model: seat
+    model_how: derived
+    units:
+    - seat
+    periods:
+    - month
+  - name: Enterprise
+    access: other
+    model: unstated
+    model_how: derived
+    units:
+    - seat
+    periods: []
