@@ -64,10 +64,59 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-Braid Social, Inc. is an a16z / Initialized Capital portfolio company (seed $6.8M, August 2023) founded by Matthew Cahill and Chris Piro. It launched as a creator-economy direct-to-fan platform on `braid.ai` / `braid.social`, and now ships **Braid Teams** at [trybraid.io](https://www.trybraid.io/) (mirrored at braidsocial.com) — an AI-powered employee-engagement copilot that runs inside Slack: icebreakers, games, polls, events, reminders, leaderboards and engagement reporting.
+> **No live API surface.** Nothing from this company could be reached the last time it was checked: the site is offline, parked or unreachable, or no public API was found. This profile is kept as a historical record and is not maintained or rated.
 
-**There is no public Braid API.** No developer portal, API reference, OpenAPI/AsyncAPI/GraphQL spec, SDK, CLI, MCP server, agent card or GitHub organization was found on any Braid host (probed 2026-08-13). The only machine surface is the private application backend at `core.trybraid.io`, which answers `{"status": "ok"}` at its root and returns HTTP 404 for every spec, docs and `/.well-known/` path. `app.trybraid.io` is a single-page app whose catch-all returns HTTP 200 with the same HTML shell for every path — those 200s are not documents.
+Braid Social, Inc. is a venture-backed startup that has run two products under the Braid name. It launched as a creator-economy, direct-to-fan engagement platform — founded by former Facebook product designer Matthew Cahill and software engineer Chris Piro — letting creators build customizable landing pages that consolidated their work across the web (blog posts, videos, podcasts, and commerce links), collect fan phone numbers, and reach followers directly through SMS, push notifications, and mailing lists, with link tracking and cross-platform analytics. It raised a $6.8M seed round in August 2023 led by Andreessen Horowitz (a16z) with Initialized Capital. The original domain braid.ai is now a domain-for-sale listing at atom.com and braid.social no longer resolves. The same legal entity now ships "Braid Teams" at trybraid.io (mirrored at braidsocial.com) — an AI-powered employee-engagement copilot that runs inside Slack, automating icebreakers, games, polls, events, reminders, leaderboards, and engagement reporting for distributed teams, on a free / $5-per-user Premium / contact-us Enterprise plan. Braid Teams is a Slack-app product with no public developer program: no developer portal, no documentation, no OpenAPI, no SDKs, and no GitHub organization. The only machine surface is the private application backend at core.trybraid.io, which answers {"status":"ok"} at its root and 404s every spec, docs and /.well-known/ path. The homepage states the product is "Currently not accepting new users" and the Slack install endpoint returns HTTP 500.
 
-The original domains are gone: `braid.ai` redirects to an atom.com domain-for-sale listing and `braid.social` has no DNS. Braid Teams itself is paused — the homepage reads "Currently not accepting new users" and the Slack install endpoint returns HTTP 500. See `lifecycle/braid-social-lifecycle.yml` for the full evidence table.
+**Areas:** Company · Employee Engagement · Slack · Collaboration · Team Building · Human Resources · Creator Economy · Social · Messaging · Landing Pages · Analytics · Consumer
 
-Backed by: a16z, Initialized Capital
+## Braid Social on APIs.io (historical record)
+
+Everything profiled for Braid Social is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/braid-social/](https://apis.io/providers/braid-social/)** — or go straight to one of the APIs or properties below.
+
+### Published properties
+
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
+
+#### Security (1)
+
+Authentication, trust centre, and vulnerability disclosure.
+
+- [Braid Social Domain Security](https://apis.io/security/braid-social/braid-social-domain-security/)
+
+#### Plans and pricing (1)
+
+Published plans, tiers and prices.
+
+- [Braid Social Plans Pricing](https://apis.io/plans/braid-social/braid-social-plans-pricing/)
+
+#### Rate limits (1)
+
+Published request limits.
+
+- [Braid Social Rate Limits](https://apis.io/rate-limits/braid-social/braid-social-rate-limits/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
+- [Website](https://www.trybraid.io/)
+- [Pricing](https://www.trybraid.io/)
+- [Support](https://www.trybraid.io/support)
+- [Blog](https://www.trybraid.io/blog)
+
+## API Evangelist rating
+
+**Not rated** — this company is recorded as no live api surface, so no score is published. If it is in fact operating, say so on this repository and it will be re-profiled.
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Braid Social: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/braid-social/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
